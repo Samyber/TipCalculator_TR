@@ -3,30 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:defaultValue="1">
 
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="pref_remember_tip_percent"
-        android:summary="@string/remember_summary"
-        android:title="@string/remember_title" />
-    <ListPreference
-        android:defaultValue="@string/rounding_default"
-        android:dialogTitle="@string/rounding_title"
-        android:entries="@array/rounding_keys"
-        android:entryValues="@array/rouding_values"
-        android:key="pref_rounding"
-        android:summary="@string/rounding_summary"
-        android:title="@string/rounding_title" />
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="pref_divide_total"
-        android:summary="@string/divide_summary"
-        android:title="@string/divide_title" />
-    <ListPreference
-        android:entries="@array/default_percent_keys"
-        android:entryValues="@array/default_percent_values"
-        android:key="pref_default_tip_percent"
-        android:summary="@string/default_percent_summary"
-        android:dialogTitle="@string/default_percent_title"
-        android:defaultValue="@string/default_percent_default"
-        android:title="@string/default_percent_title" />
+    <PreferenceCategory android:title="@string/category_tip_percent">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_remember_tip_percent"
+            android:summary="@string/remember_summary"
+            android:title="@string/remember_title" />
+        <ListPreference
+            android:defaultValue="@string/default_percent_default"
+            android:dialogTitle="@string/default_percent_title"
+            android:entries="@array/default_percent_keys"
+            android:entryValues="@array/default_percent_values"
+            android:key="pref_default_tip_percent"
+            android:summary="@string/default_percent_summary"
+            android:title="@string/default_percent_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/category_rounding">
+
+        <ListPreference
+            android:defaultValue="@string/rounding_default"
+            android:dialogTitle="@string/rounding_title"
+            android:entries="@array/rounding_keys"
+            android:entryValues="@array/rouding_values"
+            android:key="pref_rounding"
+            android:summary="@string/rounding_summary"
+            android:title="@string/rounding_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/category_divide">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_divide_total"
+            android:summary="@string/divide_summary"
+            android:title="@string/divide_title" />
+    </PreferenceCategory>
 </PreferenceScreen>

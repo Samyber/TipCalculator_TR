@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -73,6 +74,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
         progressTextView = (TextView) findViewById(R.id.progressTextView);
         progressSeekBar = (SeekBar) findViewById(R.id.progressSeekBar);
 
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.spinner_keys, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         divide_spinner.setAdapter(adapter);
@@ -117,6 +119,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
             float default_tip_percent = Float.parseFloat(prefs.getString("pref_default_tip_percent","0.15f"));
             tipPercent=default_tip_percent;
         }
+
         round = Integer.parseInt(prefs.getString("pref_rounding", String.valueOf(ROUND_NONE)));
 
         divide_total = prefs.getBoolean("pref_divide_total",false);

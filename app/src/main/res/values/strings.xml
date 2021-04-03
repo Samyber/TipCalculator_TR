@@ -71,4 +71,8 @@
 
     <string name="color_menu">Change color</string>
     <string name="progress">50</string>
+
+    <string name="category_tip_percent">Tip percent</string>
+    <string name="category_rounding">Rounding</string>
+    <string name="category_divide">Divide</string>
 </resources>
